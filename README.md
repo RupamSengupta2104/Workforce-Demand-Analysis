@@ -26,12 +26,7 @@ python -m venv venv
 ```
 
 ### **2️⃣ Activate the Virtual Environment**
-**For Windows (PowerShell):**
-```sh
-Set-ExecutionPolicy Unrestricted -Scope Process
-venv\Scripts\Activate.ps1
-```
-**For Windows (Command Prompt):**
+**For Windows:**
 ```sh
 venv\Scripts\activate
 ```
@@ -47,9 +42,13 @@ pip install -r requirements.txt
 ```
 
 ## 📌 How to Add Only Selected Libraries to `requirements.txt`
-If you only want to include specific libraries (e.g., `pandas`, `requests`, `matplotlib`, `seaborn`, `notebook`), run:
+If you don’t want to include all installed libraries, use:
 ```sh
-pip freeze | findstr /R "pandas requests matplotlib seaborn notebook" > requirements.txt
+pip freeze > all_packages.txt  # Save all installed packages
+```
+Then, manually select the required ones and create `requirements.txt`:
+```sh
+echo "pandas\nrequests\nmatplotlib\nseaborn\nnotebook" > requirements.txt
 ```
 To install from this file later:
 ```sh
@@ -57,4 +56,39 @@ pip install -r requirements.txt
 ```
 
 ---
-✅ **Project setup is complete!** Next, download the dataset and start the analysis!
+
+## 📊 Data Loading & Exploration
+
+### **1️⃣ Dataset Used:**
+- **Glassdoor Data Science Jobs - 2024** (Downloaded from Kaggle)
+
+### **2️⃣ Loading the Dataset**
+- **Script Name:** `load_explore_data.py`
+- **Location:** `scripts/`
+
+#### **Code to Load CSV:**
+```python
+import pandas as pd
+
+# Load dataset
+file_path = "data/glassdoor_ds_jobs_2024.csv"  # Adjust filename if needed
+df = pd.read_csv(file_path)
+
+# Display first few rows
+print(df.head())
+```
+
+### **3️⃣ Checking Column Names**
+```python
+print("\n📌 Column Names in Dataset:")
+print(df.columns)
+```
+
+### **4️⃣ Fixing KeyError Issue**
+Column names are case-sensitive. The correct column name is `"job_title"`, not `"Job Title"`.
+
+```python
+print(df["job_title"].unique()[:10])  # Display first 10 unique job titles
+```
+
+✅ **Next Steps:** Continue data exploration, cleaning, and insights generation!
