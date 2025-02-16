@@ -91,4 +91,44 @@ Column names are case-sensitive. The correct column name is `"job_title"`, not `
 print(df["job_title"].unique()[:10])  # Display first 10 unique job titles
 ```
 
-✅ **Next Steps:** Continue data exploration, cleaning, and insights generation!
+### Handling Missing Values
+
+#### 1️⃣ Check Missing Values
+```sh
+python scripts/handle_missing_values.py
+```
+- Prints missing values in each column.
+
+#### 2️⃣ Handling Missing Values (Basic Approach)
+```sh
+python scripts/clean_missing_values_basic.py
+```
+- Fills numerical missing values with mean.
+- Fills categorical missing values with most frequent value.
+
+#### 3️⃣ Handling Missing Values (Advanced Approach)
+```sh
+python scripts/clean_missing_values_predict.py
+```
+- Uses **sklearn SimpleImputer** to handle missing values.
+- Converts salary data to numeric before imputation.
+- Fixes `inplace=True` warnings by using direct assignment instead.
+
+### File Paths & Execution Notes
+- **With `pathlib` (Recommended):**
+  ```python
+  from pathlib import Path
+  file_path = Path("data/glassdoor_jobs.csv")
+  df = pd.read_csv(file_path)
+  ```
+- **Without `pathlib` (Alternative):**
+  ```python
+  file_path = "data/glassdoor_jobs.csv"
+  df = pd.read_csv(file_path)
+  ```
+- **Ensure you run scripts from the root directory:**
+  ```sh
+  python scripts/your_script.py
+  ```
+
+✅ **Today's Updates:** Missing value handling scripts revised to remove `inplace=True` errors and ensure proper execution.
