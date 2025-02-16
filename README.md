@@ -131,4 +131,43 @@ python scripts/clean_missing_values_predict.py
   python scripts/your_script.py
   ```
 
-✅ **Today's Updates:** Missing value handling scripts revised to remove `inplace=True` errors and ensure proper execution.
+  ### 5️⃣ Exploratory Data Analysis (EDA)
+```sh
+python scripts/exploratory_data_analysis.py
+```
+- Generates descriptive statistics.
+- Visualizes distributions of key variables.
+- Creates a correlation matrix heatmap.
+- Saves output visualizations in the `images/` directory.
+
+## Summary of EDA Findings
+- **Salary distribution:** Most salaries are concentrated in a specific range, with some outliers.
+- **Company ratings:** Most companies have ratings between 3 and 4.
+- **Employment types:** Majority of jobs are full-time, with fewer part-time or contract positions.
+- **Industry trends:** Certain industries dominate job postings, indicating high demand.
+- **Correlation analysis:** Identified relationships between salary, company size, and other factors.
+
+## File Paths & Execution Notes
+- **With `pathlib` (Recommended):**
+  ```python
+  from pathlib import Path
+  file_path = Path("data/glassdoor_jobs.csv")
+  df = pd.read_csv(file_path)
+  ```
+- **Without `pathlib` (Alternative):**
+  ```python
+  file_path = "data/glassdoor_jobs.csv"
+  df = pd.read_csv(file_path)
+  ```
+- **Ensure you run scripts from the root directory:**
+  ```sh
+  python scripts/your_script.py
+  ```
+
+## Final Cleaned Dataset
+The cleaned dataset is saved as:
+```
+data/glassdoor_jobs_cleaned_final.csv
+```
+
+
