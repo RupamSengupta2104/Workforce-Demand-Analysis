@@ -46,13 +46,15 @@ If you don’t want to include all installed libraries, use:
 ```sh
 pip freeze > all_packages.txt  # Save all installed packages
 ```
-Then, manually select the required ones and create `requirements.txt`:
+Then, filter and create `requirements.txt` with only the necessary packages:
 ```sh
-echo "pandas\nrequests\nmatplotlib\nseaborn\nnotebook" > requirements.txt
+pip freeze | findstr /R "pandas numpy matplotlib seaborn scikit-learn requests" > requirements.txt
 ```
 To install from this file later:
 ```sh
 pip install -r requirements.txt
+```
+
 ```
 
 ---
