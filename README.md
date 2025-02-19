@@ -206,3 +206,31 @@ Categorizing job roles helps in:
 ### 📂 Generated Output
 - The categorized data is saved in **`categorized_job_listings.csv`** for further analysis.
 
+## 📊 Exploratory Data Analysis (EDA) – Job Demand Analysis  
+
+### 🔹 Why Conduct EDA?  
+Exploratory Data Analysis (EDA) helps us understand the job market trends and hiring patterns by analyzing key metrics. It provides valuable insights into:  
+
+- **Most In-Demand Job Roles** – Identifying roles with the highest demand.  
+- **Industry Hiring Trends** – Understanding which industries are growing the fastest.  
+- **Salary Distribution** – Analyzing salary estimates across different job categories.  
+- **Location-Based Hiring Trends** – Identifying regions with high job availability.  
+
+### 🛠 Steps Taken  
+1. **Data Cleaning & Preprocessing**  
+   - Handled missing values and standardized job titles.  
+2. **Visualization of Job Demand**  
+   - Created bar charts to show the most frequently posted job roles.  
+   - Analyzed job openings across different industries.  
+3. **Salary Trends Analysis**  
+   - Plotted salary distributions for various job roles.  
+4. **Regional Hiring Analysis**  
+   - Identified cities and states with the highest job postings.  
+
+### 📈 Key Insights  
+- **High demand for tech-related roles**, including **Data Science, Software Engineering, and Cloud Computing**.  
+- The **"Other" category had a significant market presence**, indicating a diverse job market.  
+- Certain **industries showed rapid growth**, highlighting future job opportunities.  
+
+### 📁 Output File  
+The findings from this EDA are saved as:  
