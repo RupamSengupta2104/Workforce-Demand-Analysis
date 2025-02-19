@@ -234,3 +234,29 @@ Exploratory Data Analysis (EDA) helps us understand the job market trends and hi
 
 ### 📁 Output File  
 The findings from this EDA are saved as:  
+
+# 📊 Job Demand Analysis  
+
+## 🔍 Overview  
+This step analyzes job demand across different **industries** and **sectors** based on job listing data. We visualize the **top 10 industries** and **top 10 sectors** with the highest number of job postings.  
+
+## 📌 Key Steps  
+1. **Loaded categorized job listings** from `categorized_job_listings.csv`.  
+2. **Counted job listings** for each industry and sector.  
+3. **Plotted bar charts** for the top 10 industries and sectors.  
+4. **Saved analysis results** as CSV files:  
+   - `industry_demand_analysis.csv`  
+   - `sector_demand_analysis.csv`  
+5. **Exported visualizations** as PNG files:  
+   - `industry_demand.png`  
+   - `sector_demand.png`  
+
+## 📊 Visualizations  
+### 🔹 **Top 10 Industries by Job Demand**  
+<img src="industry_demand.png" alt="Industry Demand" width="600">
+
+### 🔹 **Top 10 Sectors by Job Demand**  
+<img src="sector_demand.png" alt="Sector Demand" width="600">
+
+## 🚀 Next Steps  
+Proceeding with further **job trend analysis**, **salary insights**, and **location-based demand** analysis.  
