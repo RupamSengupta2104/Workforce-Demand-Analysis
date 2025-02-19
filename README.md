@@ -172,4 +172,37 @@ The cleaned dataset is saved as:
 data/glassdoor_jobs_cleaned_final.csv
 ```
 
+## 📌 Job Title Normalization
+
+### 🔹 Why Normalize Job Titles?
+Job titles can vary widely across companies, making it difficult to analyze workforce demand effectively. Normalization helps by:
+- **Standardizing Job Titles:** Converts similar job titles (e.g., "Sr. Data Scientist" and "Senior Data Scientist") into a common format.
+- **Reducing Redundancy:** Eliminates variations caused by abbreviations, seniority levels, or special characters.
+- **Improving Analysis:** Ensures better grouping and comparison of job roles across different organizations.
+
+### 🛠 How Was It Done?
+- **Text Cleaning:** Job titles were converted to lowercase and stripped of unnecessary characters.
+- **Standardization Rules:** Common patterns (e.g., "Sr." → "Senior", "ML Engineer" → "Machine Learning Engineer") were applied.
+- **Output Generation:** A new column, **`normalized_job_title`**, was created to store the cleaned and standardized job titles.
+
+### 📂 Generated Output
+- The normalized job data is saved in **`normalized_job_listings.csv`** for further processing.
+
+
+## 📌 Job Role Categorization
+
+### 🔹 Why Categorize Job Roles?
+Categorizing job roles helps in:
+- **Understanding Workforce Trends:** Identifying the demand for specific job categories like Data Science, Software Engineering, and Cloud & DevOps.
+- **Comparing Hiring Patterns:** Analyzing which industries are hiring the most for certain roles.
+- **Salary Insights:** Grouping job roles helps in comparing salary trends across different categories.
+- **Better Visualization:** Categorized data allows for clearer insights when creating visualizations and dashboards.
+
+### 🛠 How Was It Done?
+- A mapping was created where specific **keywords** (e.g., "Data Scientist", "AI", "Cloud") were assigned to relevant job categories.
+- The script scans **job titles** and assigns them to predefined **categories**.
+- Jobs that do not match any category are classified under **"Other"**.
+
+### 📂 Generated Output
+- The categorized data is saved in **`categorized_job_listings.csv`** for further analysis.
 
