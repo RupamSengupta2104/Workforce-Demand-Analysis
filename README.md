@@ -260,3 +260,22 @@ This step analyzes job demand across different **industries** and **sectors** ba
 
 ## 🚀 Next Steps  
 Proceeding with further **job trend analysis**, **salary insights**, and **location-based demand** analysis.  
+
+# 📊 Salary Analysis Across Industries and Sectors  
+
+## 🔍 Overview  
+This step analyzes salary trends across different industries and sectors. By examining the **average salary estimates**, we identify which industries and sectors offer higher pay and where the demand for talent is financially rewarding.  
+
+## 📂 Files Generated  
+- **industry_salary_analysis.csv** – Contains the average salary estimates by industry.  
+- **sector_salary_analysis.csv** – Contains the average salary estimates by sector.  
+- **industry_salary.png** – Bar plot visualizing salary trends across industries.  
+- **sector_salary.png** – Bar plot visualizing salary trends across sectors.  
+
+## 📈 Insights  
+- Industries and sectors with higher salaries can indicate strong financial backing or high-demand skills.  
+- Lower salaries may indicate oversaturated job markets or budget constraints.  
+
+## 🚀 Next Steps  
+- Further analysis on salary trends based on **job roles and experience levels**.  
+- Identifying outliers and salary disparities within industries.  
